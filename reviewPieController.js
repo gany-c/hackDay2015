@@ -219,14 +219,14 @@ countPieGui.controller('mainController',function($scope, $http){
 
 
 //	document.getElementById("cloudId").src = "http://172.28.90.252:7777/cloud_"+$scope.productIdStr+".html";
-	document.getElementById("cloudId").src = "http://192.168.0.105/:7777/cloud_"+$scope.productIdStr+".html";
-
+//	document.getElementById("cloudId").src = "http://192.168.0.105/:7777/cloud_"+$scope.productIdStr+".html";
+        document.getElementById("cloudId").src = "http://0.0.0.0:7777/cloud_"+$scope.productIdStr+".html";
 		
 	remoteCall($scope.productIdStr);
 	};	
  
 	var remoteCall = function(productId){
-   $http.get('http://192.168.0.105:8888/?productId='+productId).success(
+   $http.get('http://0.0.0.0:8888/?productId='+productId).success(
 //   $http.get('http://172.28.90.252:8888/?productId='+productId).success(
            function(response) {
 
